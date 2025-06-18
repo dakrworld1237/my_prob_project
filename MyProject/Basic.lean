@@ -197,3 +197,10 @@ lemma firstlemma (n : ℕ) : terminates_in_n (6 + 5*n) (prog, startstate) termst
 
       have helper2 : eval 6 (prog, startstate) = [] := by sorry
       sorry
+
+
+lemma secondlemma (n : ℕ) : ¬ (∃ (k : ℕ ), 6 + 5*k = n) → terminates_in_n n (prog, startstate) termstate1 = 0 := by sorry
+
+
+lemma thirdlemma (N : ℕ): ∑ i ∈ range (N), terminates_in_n (i + 1) (prog, startstate) termstate1 =
+                        (1-(1/4)^(N))/3 := by sorry
